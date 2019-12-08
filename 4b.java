@@ -37,4 +37,35 @@ public class Account {
 		}
 	}
 }
+package balance;
+import java.util.Scanner;
+public class Mainprogram {
+	public static void main(String args[]) {
+		int ch;
+		Scanner s=new Scanner(System.in);
+		Account a=new Account();
+		while(true) {
+			System.out.println("1.deposit  2.withdraw   3.display   4.exit\n");
+			System.out.println("Enter your choice");
+			ch=s.nextInt();
+			switch(ch) {
+			 case 1:                     
+				 a.deposit();                     
+				 break;                 
+				 case 2:                     
+					 a.withdraw();                     
+					 break;                  
+					 case 3:                     
+						 a.display_amt();                     
+						 break;                 
+						 case 4:                     
+							 return;                 
+							 default:                     
+								 System.out.println("Invalid choice\n");                     
+								 return; 
+			}
+		}
+		
+	}
+}
 
