@@ -14,3 +14,13 @@ public class Outer{
 		System.out.println("Through Inner Class, x = "+obj2.x);     
 		} 
 } 
+ class Main1b  
+{   
+	public static void main(String args[])   
+	{     
+		Outer ob1=new Outer();     
+		Outer.inner ob2=new Outer().new inner();     
+		System.out.println("Through Different Class, Outer's protected z = "+ob1.z);     
+		System.out.println("Through Different Class, Inner's protected z = "+ob2.z);   
+	}
+}
